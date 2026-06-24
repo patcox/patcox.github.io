@@ -8,6 +8,15 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 function formatDate(d: Date) {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
+
+// Build sorted tag list with counts
+const tagCounts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags ?? []) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+const allTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 ---
 <Base
   title="Writing — Pat Cox"
@@ -39,6 +48,28 @@ function formatDate(d: Date) {
             </li>
           ))}
         </ul>
+      )}
+
+      {allTags.length > 0 && (
+        <details class="topics-accordion">
+          <summary>Browse by topic</summary>
+          <ul class="topics-list">
+            {allTags.map(([tag, count]) => (
+              <li>
+                <span>
+                  <a href={`/tags/${tag}`} class="topics-list-tag">
+                    {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                  </a>
+                  <span class="topics-list-tag-count">{count} post{count !== 1 ? 's' : ''}</span>
+                </span>
+                <div class="topics-list-actions">
+                  <a href={`/tags/${tag}`} class="tag">{tag}</a>
+                  <a href={`/tags/${tag}.xml`} class="rss-tag-link">RSS</a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </details>
       )}
     </section>
   </div>

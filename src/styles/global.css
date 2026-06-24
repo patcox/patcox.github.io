@@ -315,6 +315,111 @@ main { flex: 1; }
   font-weight: 500;
 }
 
+/* ─── Topics Accordion ───────────────────────────────────────────────── */
+.topics-accordion {
+  margin-top: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.topics-accordion summary {
+  padding: 0.9rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.topics-accordion summary::-webkit-details-marker { display: none; }
+
+.topics-accordion summary::after {
+  content: '＋';
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.topics-accordion[open] summary::after {
+  content: '－';
+}
+
+.topics-accordion summary:hover {
+  background: var(--bg-alt);
+}
+
+.topics-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.topics-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.topics-list li:last-child { border-bottom: none; }
+
+.topics-list-tag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+.topics-list-tag:hover { color: var(--accent); }
+
+.topics-list-tag-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 0.4rem;
+}
+
+.topics-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rss-tag-link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.15rem 0.6rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+.rss-tag-link:hover { border-color: var(--accent-warm); color: var(--accent-warm); }
+
+/* ─── Tag Page ───────────────────────────────────────────────────────── */
+.tag-page-meta {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag-page-sep { color: var(--border); }
+
 /* ─── Blog / Writing Page ────────────────────────────────────────────── */
 .page-hero {
   padding: 3.5rem 0 2rem;

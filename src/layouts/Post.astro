@@ -25,7 +25,7 @@ const formatted = pubDate.toLocaleDateString('en-US', {
         <time datetime={pubDate.toISOString()}>{formatted}</time>
         {tags.length > 0 && (
           <div class="tags">
-            {tags.map(tag => <span class="tag">{tag}</span>)}
+            {tags.map(t => <a href={`/tags/${t}`} class="tag">{t}</a>)}
           </div>
         )}
       </div>
