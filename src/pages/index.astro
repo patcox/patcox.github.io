@@ -54,16 +54,18 @@ function formatDate(d: Date) {
         <p class="section-label">Recent writing</p>
         <ul class="post-list">
           {posts.map(post => (
-            <li class="post-card">
-              <div>
-                <a class="post-card-title" href={`/writing/${post.slug}`}>{post.data.title}</a>
-                {post.data.description && (
-                  <p class="post-card-desc">{post.data.description}</p>
-                )}
-              </div>
-              <time class="post-card-date" datetime={post.data.pubDate.toISOString()}>
-                {formatDate(post.data.pubDate)}
-              </time>
+            <li>
+              <a class="post-card" href={`/writing/${post.slug}`}>
+                <div>
+                  <span class="post-card-title">{post.data.title}</span>
+                  {post.data.description && (
+                    <p class="post-card-desc">{post.data.description}</p>
+                  )}
+                </div>
+                <time class="post-card-date" datetime={post.data.pubDate.toISOString()}>
+                  {formatDate(post.data.pubDate)}
+                </time>
+              </a>
             </li>
           ))}
         </ul>
