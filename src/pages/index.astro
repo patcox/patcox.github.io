@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+<Base
+  title="Pat Cox"
+  description="AI consultant, technologist, and Hill Country resident. I help people figure out what AI actually means for them."
+>
+
+  <!-- Hero / About -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Pat Cox · Dripping Springs, TX</p>
+          <h1>I help people figure out what AI actually means for them.</h1>
+          <p class="hero-bio">
+            I'm a nerd. Computers are my happy place. I spent twelve years inside one of the
+            largest technology companies in the world — from teaching professors to get icons off
+            their desktops to running programs for executives with multi-billion dollar budgets.
+            <br /><br />
+            These days I help individuals and businesses cut through the AI hype and find what's
+            actually useful. When I'm not behind a screen, I'm on my tractor or feeding my chickens.
+          </p>
+          <div class="hero-actions">
+            <a href="/connect" class="btn btn-primary">Schedule time with me</a>
+            <a href="/writing" class="btn btn-outline">Read my writing</a>
+          </div>
+        </div>
+        <div class="headshot-wrap">
+          <img
+            src="https://www.drippingtech.com/pat-headshot.png"
+            alt="Pat Cox"
+            width="160"
+            height="160"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="headshot-initials" style="display:none;">PC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Writing -->
+  {posts.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Recent writing</p>
+        <ul class="post-list">
+          {posts.map(post => (
+            <li class="post-card">
+              <div>
+                <a class="post-card-title" href={`/writing/${post.slug}`}>{post.data.title}</a>
+                {post.data.description && (
+                  <p class="post-card-desc">{post.data.description}</p>
+                )}
+              </div>
+              <time class="post-card-date" datetime={post.data.pubDate.toISOString()}>
+                {formatDate(post.data.pubDate)}
+              </time>
+            </li>
+          ))}
+        </ul>
+        <p class="view-all"><a href="/writing">All posts →</a></p>
+      </div>
+    </section>
+  )}
+
+  <!-- Newsletter -->
+  <div class="newsletter-band">
+    <div class="container">
+      <h3>Stay in the loop</h3>
+      <p>Occasional notes on AI, technology, and whatever else I'm thinking about. No spam, easy to unsubscribe.</p>
+      <form class="newsletter-form" action="#" method="POST">
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+</Base>
