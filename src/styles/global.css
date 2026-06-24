@@ -264,19 +264,26 @@ main { flex: 1; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.75rem;
 }
 
 .post-card {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: baseline;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.post-card:first-child { border-top: 1px solid var(--border); }
+.post-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(77,110,68,0.10);
+}
 
 .post-card-title {
   font-family: var(--font-serif);
