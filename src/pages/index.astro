@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
+
+const home = await getEntry('pages', 'home');
+const { Content: HomeBio } = await home.render();
+const { tagline, headline, subtitle, newsletter_heading, newsletter_description } = home.data;
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -20,16 +24,11 @@ function formatDate(d: Date) {
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <p class="hero-eyebrow">Pat Cox · Dripping Springs, TX</p>
-          <h1>I help people figure out what AI actually means for them.</h1>
-          <p class="hero-bio">
-            I'm a nerd. Computers are my happy place. I spent twelve years inside one of the
-            largest technology companies in the world — from teaching professors to get icons off
-            their desktops to running programs for executives with multi-billion dollar budgets.
-            <br /><br />
-            These days I help individuals and businesses cut through the AI hype and find what's
-            actually useful. When I'm not behind a screen, I'm on my tractor or feeding my chickens.
-          </p>
+          <p class="hero-eyebrow">{tagline}</p>
+          <h1>{headline}</h1>
+          <div class="hero-bio">
+            <HomeBio />
+          </div>
           <div class="hero-actions">
             <a href="/connect" class="btn btn-primary">Schedule time with me</a>
             <a href="/writing" class="btn btn-outline">Read my writing</a>
@@ -77,8 +76,8 @@ function formatDate(d: Date) {
   <!-- Newsletter -->
   <div class="newsletter-band">
     <div class="container">
-      <h3>Stay in the loop</h3>
-      <p>Occasional notes on AI, technology, and whatever else I'm thinking about. No spam, easy to unsubscribe.</p>
+      <h3>{newsletter_heading}</h3>
+      <p>{newsletter_description}</p>
       <form class="newsletter-form" action="#" method="POST">
         <input type="email" name="email" placeholder="you@example.com" required />
         <button type="submit">Subscribe</button>

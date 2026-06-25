@@ -1,6 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
+
+const writing = await getEntry('pages', 'writing');
+const { seo_title, seo_description, heading, description } = writing.data;
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -9,7 +12,6 @@ function formatDate(d: Date) {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-// Build sorted tag list with counts
 const tagCounts = new Map<string, number>();
 for (const post of posts) {
   for (const tag of post.data.tags ?? []) {
@@ -18,15 +20,12 @@ for (const post of posts) {
 }
 const allTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 ---
-<Base
-  title="Writing — Pat Cox"
-  description="Notes on AI, technology, and whatever else Pat Cox is thinking about."
->
+<Base title={seo_title!} description={seo_description!}>
   <div class="container">
     <header class="page-hero">
       <p class="section-label">Writing</p>
-      <h1>Notes & essays</h1>
-      <p>On AI, technology, and the things that matter.</p>
+      <h1>{heading}</h1>
+      <p>{description}</p>
     </header>
 
     <section class="section">

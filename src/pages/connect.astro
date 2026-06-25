@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getEntry } from 'astro:content';
+
+const connect = await getEntry('pages', 'connect');
+const { headline, description } = connect.data;
 ---
 <Base
   title="Connect — Pat Cox"
@@ -8,11 +12,8 @@ import Base from '../layouts/Base.astro';
   <div class="container">
     <header class="connect-intro">
       <p class="section-label">Connect</p>
-      <h1>Let's get together.</h1>
-      <p>
-        I love meeting people. If you're curious about AI, want to talk tech, or just want to grab
-        lunch — I'm genuinely up for it. Pick what works for you.
-      </p>
+      <h1>{headline}</h1>
+      <p>{description}</p>
     </header>
   </div>
 
@@ -62,10 +63,8 @@ import Base from '../layouts/Base.astro';
   </div>
 
   <script>
-    // Toggle between cards and inline embed
-    // To switch to embed view, set SHOW_EMBED = true
     const SHOW_EMBED = false;
-    const CAL_LINK = 'patcox/chat-with-pat'; // default event for embed
+    const CAL_LINK = 'patcox/chat-with-pat';
 
     if (SHOW_EMBED) {
       const cards = document.getElementById('schedule-cards');

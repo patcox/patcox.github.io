@@ -1,5 +1,6 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { SITE } from '../../config/site.ts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -16,8 +17,8 @@ export async function GET(context) {
   const label = tag.charAt(0).toUpperCase() + tag.slice(1);
 
   return rss({
-    title: `Pat Cox — ${label}`,
-    description: `Posts tagged "${tag}" from Pat Cox`,
+    title: `${SITE.title} — ${label}`,
+    description: `Posts tagged "${tag}" from ${SITE.title}`,
     site: context.site,
     items: posts.map(post => ({
       title: post.data.title,
