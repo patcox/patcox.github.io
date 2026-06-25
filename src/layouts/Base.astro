@@ -33,6 +33,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:image" content={new URL(ogImage, Astro.site)} />
   <meta property="og:type" content={article ? 'article' : 'website'} />
 
+  <!-- Twitter/X card — controls link previews when shared, no account needed -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="Pat Cox" href="/rss.xml" />
 
