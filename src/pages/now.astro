@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEntry } from 'astro:content';
+
+const now = await getEntry('pages', 'now');
+const { Content } = await now.render();
+const { lastUpdated } = now.data;
+---
+<Base
+  title="Now — Pat Cox"
+  description="What Pat Cox is focused on right now."
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="section-label">Now</p>
+      <h1>Keeping it real-time.</h1>
+      <p class="now-updated">
+        Last updated: {lastUpdated} ·
+        <a href="https://nownownow.com/about" target="_blank" rel="noopener">What is a /now page?</a>
+      </p>
+    </header>
+
+    <div class="now-body">
+      <Content />
+    </div>
+  </div>
+</Base>

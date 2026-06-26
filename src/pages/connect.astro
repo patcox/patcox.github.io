@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEntry } from 'astro:content';
+
+const connect = await getEntry('pages', 'connect');
+const { headline, description } = connect.data;
+---
+<Base
+  title="Connect — Pat Cox"
+  description="Book time with Pat Cox for a coffee, lunch, or a quick call."
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="section-label">Connect</p>
+      <h1>{headline}</h1>
+      <p>{description}</p>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="schedule-cards">
+
+      <button type="button" class="schedule-card" data-cal-link="patcox/chat-with-pat" data-cal-config='{"layout":"month_view"}'>
+        <div class="schedule-card-icon">☕</div>
+        <div class="schedule-card-title">Chat with Pat</div>
+        <p class="schedule-card-desc">
+          Book some time to chat. Grab a virtual or in-person coffee. Good for introductions,
+          ideas, or just catching up.
+        </p>
+        <div class="schedule-card-meta">30 minutes · Cal.com</div>
+      </button>
+
+      <button type="button" class="schedule-card" data-cal-link="patcox/lunch-with-pat" data-cal-config='{"layout":"month_view"}'>
+        <div class="schedule-card-icon">🍽️</div>
+        <div class="schedule-card-title">Lunch with Pat</div>
+        <p class="schedule-card-desc">
+          Let's get lunch. I'm in Dripping Springs and happy to find a spot that works for both
+          of us nearby.
+        </p>
+        <div class="schedule-card-meta">1 hour · Cal.com</div>
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    (function (C, A, L) {
+      let p = function (a: any, ar: any) { a.q.push(ar); };
+      let d = C.document;
+      (C as any).Cal = (C as any).Cal || function (...args: any[]) {
+        let cal = (C as any).Cal;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (args[0] === L) {
+          const api = function (...a: any[]) { p(api, a); };
+          const namespace = args[1];
+          (api as any).q = (api as any).q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], args);
+            p(cal, [L, namespace, args[2]]);
+          } else {
+            p(cal, args);
+          }
+          return;
+        }
+        p(cal, args);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    (window as any).Cal("init", { origin: "https://cal.com" });
+    (window as any).Cal("ui", {
+      styles: { branding: { brandColor: "#4D6E44" } },
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
+  </script>
+
+</Base>
