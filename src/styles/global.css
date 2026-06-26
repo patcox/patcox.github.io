@@ -423,23 +423,26 @@ main { flex: 1; }
 
 .tag-page-sep { color: var(--border); }
 
-/* ─── Blog / Writing Page ────────────────────────────────────────────── */
-.page-hero {
+/* ─── Inner Page Header (Now, Connect, Writing) ──────────────────────── */
+.page-header {
   padding: 3.5rem 0 2rem;
   border-bottom: 1px solid var(--border);
 }
 
-.page-hero h1 {
+.page-header h1 {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
 }
 
-.page-hero p {
+.page-header p {
   margin-top: 0.75rem;
   color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.7;
+  max-width: 480px;
 }
 
 /* ─── Individual Post ────────────────────────────────────────────────── */
@@ -547,26 +550,6 @@ main { flex: 1; }
 }
 .tag:hover { background: var(--accent); color: #fff; }
 
-/* ─── Connect / Schedule Page ────────────────────────────────────────── */
-.connect-intro {
-  padding: 3.5rem 0 2.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.connect-intro h1 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
-}
-
-.connect-intro p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  max-width: 480px;
-  line-height: 1.7;
-}
 
 .schedule-cards {
   display: grid;
@@ -638,19 +621,6 @@ main { flex: 1; }
 }
 
 /* ─── Now Page ───────────────────────────────────────────────────────── */
-.now-header {
-  padding: 3.5rem 0 2rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.now-header h1 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
-}
-
 .now-updated {
   font-size: 0.85rem;
   color: var(--text-muted);

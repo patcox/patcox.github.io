@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { SITE } from '../config/site.ts';
 
 interface Props {
   title: string;
@@ -55,7 +56,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <ul class="nav-links">
       <li><a href="/now" aria-current={Astro.url.pathname === '/now' ? 'page' : undefined}>Now</a></li>
       <li><a href="/connect" aria-current={Astro.url.pathname === '/connect' ? 'page' : undefined}>Connect</a></li>
-      <li><a href="/writing" aria-current={Astro.url.pathname.startsWith('/writing') ? 'page' : undefined}>Writing</a></li>
+      {SITE.showWriting && <li><a href="/writing" aria-current={Astro.url.pathname.startsWith('/writing') ? 'page' : undefined}>Writing</a></li>}
     </ul>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
       <span id="theme-icon">◐</span>
@@ -71,7 +72,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <div class="footer-inner">
     <p class="footer-copy">© {new Date().getFullYear()} Pat Cox · Dripping Springs, TX</p>
     <ul class="footer-links">
-      <li><a href="/rss.xml">RSS</a></li>
+      {SITE.showWriting && <li><a href="/rss.xml">RSS</a></li>}
       <li><a href="/linkedin.html" rel="noopener">LinkedIn</a></li>
       <li><a href="/connect">Contact</a></li>
     </ul>
