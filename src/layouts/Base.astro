@@ -58,7 +58,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <li><a href="/connect" aria-current={Astro.url.pathname === '/connect' ? 'page' : undefined}>Connect</a></li>
     </ul>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-      <span id="theme-icon">◐</span>
+      <span id="theme-icon">☀</span>
     </button>
   </div>
 </nav>
@@ -84,7 +84,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   function applyTheme(theme: string) {
     document.documentElement.setAttribute('data-theme', theme);
     const icon = document.getElementById('theme-icon');
-    if (icon) icon.textContent = theme === 'dark' ? '○' : '◐';
+    if (icon) icon.textContent = theme === 'dark' ? '☽' : '☀';
   }
 
   function getPreferred(): string {
