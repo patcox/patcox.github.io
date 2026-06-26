@@ -32,7 +32,7 @@ function formatDate(d: Date) {
           </div>
           <div class="hero-actions">
             <a href="/connect" class="btn btn-primary">Schedule time with me</a>
-            <a href="/writing" class="btn btn-outline">Read my writing</a>
+            {SITE.showWriting && <a href="/writing" class="btn btn-outline">Read my writing</a>}
           </div>
         </div>
         <div class="headshot-wrap">
@@ -47,8 +47,8 @@ function formatDate(d: Date) {
     </div>
   </section>
 
-  <!-- Recent Writing -->
-  {posts.length > 0 && (
+  <!-- Recent Writing (gated — flip SITE.showWriting to true when ready) -->
+  {SITE.showWriting && posts.length > 0 && (
     <section class="section">
       <div class="container">
         <p class="section-label">Recent writing</p>

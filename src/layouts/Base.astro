@@ -41,7 +41,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Pat Cox" href="/rss.xml" />
+  {SITE.showWriting && <link rel="alternate" type="application/rss+xml" title="Pat Cox" href="/rss.xml" />}
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
