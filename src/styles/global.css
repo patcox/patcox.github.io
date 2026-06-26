@@ -170,6 +170,9 @@ main { flex: 1; }
   margin-bottom: 1.75rem;
 }
 
+.hero-bio p { margin-bottom: 1rem; }
+.hero-bio p:last-child { margin-bottom: 0; }
+
 .hero-actions {
   display: flex;
   gap: 0.75rem;
