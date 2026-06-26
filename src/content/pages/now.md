@@ -16,9 +16,9 @@ Summer hit and took all predictable routines with it. Kids are home, we're trave
 
 ## Reading
 
-- [*The E-Myth Revisited*](https://www.goodreads.com/book/show/81948.The_E_myth_Revisited) — Michael Gerber
-- *Avoiding Distraction* — an ADHD book I'm working through
-- [*Gregor and the Code of Claw*](https://www.goodreads.com/book/show/537070.Gregor_and_the_Code_of_Claw) — Suzanne Collins
+- [*The E-Myth Revisited*](https://books.google.com/books/about/The_E_Myth_Revisited.html?id=2X2X2r-wRaQC) — Michael Gerber
+- [*Overcoming Distractions*](https://books.google.com/books/about/Overcoming_Distractions.html?id=OF21EAAAQBAJ) — David Greenwood
+- [*Gregor and the Code of Claw*](https://books.google.com/books/about/Gregor_and_the_Code_of_Claw.html?id=N1stAAAACAAJ) — Suzanne Collins
 
 ## Watching
 
