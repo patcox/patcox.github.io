@@ -84,7 +84,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   function applyTheme(theme: string) {
     document.documentElement.setAttribute('data-theme', theme);
     const icon = document.getElementById('theme-icon');
-    if (icon) icon.textContent = '◐';
+    if (icon) icon.textContent = theme === 'dark' ? '◑' : '◐';
   }
 
   function getPreferred(): string {
