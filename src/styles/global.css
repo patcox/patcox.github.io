@@ -110,7 +110,7 @@ a:hover { color: var(--accent-warm); }
   border-radius: 20px;
   padding: 4px 10px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--text-muted);
   transition: border-color 0.15s, color 0.15s;
 }
