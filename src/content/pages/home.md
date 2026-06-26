@@ -1,11 +1,11 @@
 ---
 tagline: "Pat Cox · Dripping Springs, TX"
-headline: "I help people figure out what AI actually means for them."
-subtitle: "AI Consultant & Technologist"
-newsletter_heading: "Stay in the loop"
-newsletter_description: "Occasional notes on AI, technology, and whatever else I'm thinking about. No spam, easy to unsubscribe."
+headline: "I'm a tech guy with a wife, three kids, and 14 beehives."
+subtitle: "I help people figure out what AI can practically do for them."
+newsletter_heading: "Get the occasional note"
+newsletter_description: "I write about AI, technology, and whatever else I'm thinking about. Infrequent. No spam."
 ---
 
-I'm a nerd. Computers are my happy place. I spent twelve years inside one of the largest technology companies in the world — from teaching professors to get icons off their desktops to running programs for executives with multi-billion dollar budgets.
+I grew up in New England and have lived in a handful of very different places before landing in the Texas Hill Country — which I genuinely didn't see coming. My wife and I are raising three kids west of Austin, along with a horse, 11 chickens, 14 beehives, two cats, and a rotating cast of reptiles. I love meeting people from all walks of life and hearing where they've been.
 
-These days I help individuals and businesses cut through the AI hype and find what's actually useful. When I'm not behind a screen, I'm on my tractor or feeding my chickens.
+I've been in technology my whole career — inside big organizations, small ones, and now on my own. These days I'm focused on AI: helping people cut through the noise and find what's actually practical. I'm a tinkerer at heart. I like to build things that work and find ways technology can genuinely make people's lives better — and maybe even delight them a little.
