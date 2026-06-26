@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection, getEntry } from 'astro:content';
+import { SITE } from '../config/site.ts';
 
 const home = await getEntry('pages', 'home');
 const { Content: HomeBio } = await home.render();
@@ -73,16 +74,18 @@ function formatDate(d: Date) {
     </section>
   )}
 
-  <!-- Newsletter -->
-  <div class="newsletter-band">
-    <div class="container">
-      <h3>{newsletter_heading}</h3>
-      <p>{newsletter_description}</p>
-      <form class="newsletter-form" action="#" method="POST">
-        <input type="email" name="email" placeholder="you@example.com" required />
-        <button type="submit">Subscribe</button>
-      </form>
+  <!-- Newsletter (gated — flip SITE.showNewsletter to true when ready) -->
+  {SITE.showNewsletter && (
+    <div class="newsletter-band">
+      <div class="container">
+        <h3>{newsletter_heading}</h3>
+        <p>{newsletter_description}</p>
+        <form class="newsletter-form" action="#" method="POST">
+          <input type="email" name="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </div>
-  </div>
+  )}
 
 </Base>

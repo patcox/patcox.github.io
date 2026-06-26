@@ -53,9 +53,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <div class="nav-inner">
     <a href="/" class="nav-logo">Pat Cox</a>
     <ul class="nav-links">
-      <li><a href="/writing" aria-current={Astro.url.pathname.startsWith('/writing') ? 'page' : undefined}>Writing</a></li>
       <li><a href="/now" aria-current={Astro.url.pathname === '/now' ? 'page' : undefined}>Now</a></li>
       <li><a href="/connect" aria-current={Astro.url.pathname === '/connect' ? 'page' : undefined}>Connect</a></li>
+      <li><a href="/writing" aria-current={Astro.url.pathname.startsWith('/writing') ? 'page' : undefined}>Writing</a></li>
     </ul>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
       <span id="theme-icon">◐</span>

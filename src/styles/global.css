@@ -587,6 +587,11 @@ main { flex: 1; }
   gap: 0.5rem;
   box-shadow: var(--shadow);
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+  /* button reset */
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
 }
 
 .schedule-card:hover {
