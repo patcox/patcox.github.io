@@ -145,7 +145,7 @@ main { flex: 1; }
 }
 
 .hero-eyebrow {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -447,6 +447,12 @@ main { flex: 1; }
   font-size: 1rem;
   line-height: 1.7;
   max-width: 480px;
+}
+
+.page-header .section-label {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1rem;
 }
 
 /* ─── Individual Post ────────────────────────────────────────────────── */
