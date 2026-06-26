@@ -5,7 +5,7 @@ import { SITE } from '../config/site.ts';
 
 const home = await getEntry('pages', 'home');
 const { Content: HomeBio } = await home.render();
-const { tagline, headline, subtitle, newsletter_heading, newsletter_description } = home.data;
+const { tagline, headline, newsletter_heading, newsletter_description } = home.data;
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -17,7 +17,7 @@ function formatDate(d: Date) {
 ---
 <Base
   title="Pat Cox"
-  description="AI consultant, technologist, and Hill Country resident. I help people figure out what AI actually means for them."
+  description={SITE.description}
 >
 
   <!-- Hero / About -->

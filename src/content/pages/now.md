@@ -8,11 +8,16 @@ Getting [Dripping Tech](https://www.drippingtech.com) off the ground — my firs
 
 ## Learning
 
-Running a business is teaching me more than I expected. Also getting n8n and OpenClaw configured exactly how I want them, and picking up static web development along the way.
+- getting n8n and OpenClaw configured exactly how I want them
+- picking up static web development
+- how to start and run a small business?
 
 ## Outside the Screen
 
-Summer hit and took all predictable routines with it. Kids are home, we're traveling, and I'm doing my best to keep up. On the farm: dug up a batch of rocks that still need filling in. Lost a battle with red wasps last week — got stung directly on the earlobe. Small wins though: this year's flock finally started laying and we're getting green and blue eggs.
+- School's out for summer. Kids are home, no daily routines, we're traveling, and I'm doing my best to keep up.
+- Dug up a batch of rocks, so I need to fill in a bunch of holes.
+- Lost a battle with red wasps last week — got stung directly on the earlobe.
+- This year's flock finally started laying, and we're getting green and blue eggs!
 
 ## Reading
 
@@ -22,7 +27,8 @@ Summer hit and took all predictable routines with it. Kids are home, we're trave
 
 ## Watching
 
-MLB games when I can catch them. Just finished *Hoppers* and liked it more than expected.
+- MLB games when I can catch them.
+- [Hoppers](https://en.wikipedia.org/wiki/Hoppers_(film))
 
 ## Listening
 

@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title,
-  description = 'Pat Cox — AI consultant, technologist, and Hill Country resident.',
+  description = SITE.description,
   ogImage = '/og-default.png',
   article = false,
 } = Astro.props;
@@ -73,7 +73,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <p class="footer-copy">© {new Date().getFullYear()} Pat Cox · Dripping Springs, TX</p>
     <ul class="footer-links">
       {SITE.showWriting && <li><a href="/rss.xml">RSS</a></li>}
-      <li><a href="/linkedin.html" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/pat-cox-tech" rel="noopener" target="_blank">LinkedIn</a></li>
       <li><a href="/connect">Contact</a></li>
     </ul>
   </div>
