@@ -16,9 +16,9 @@ Summer hit and took all predictable routines with it. Kids are home, we're trave
 
 ## Reading
 
-- *The E-Myth Revisited* — Michael Gerber
+- [*The E-Myth Revisited*](https://www.goodreads.com/book/show/81948.The_E_myth_Revisited) — Michael Gerber
 - *Avoiding Distraction* — an ADHD book I'm working through
-- *Gregor and the Code of Claw* — Suzanne Collins
+- [*Gregor and the Code of Claw*](https://www.goodreads.com/book/show/537070.Gregor_and_the_Code_of_Claw) — Suzanne Collins
 
 ## Watching
 
@@ -26,6 +26,9 @@ MLB games when I can catch them. Just finished *Hoppers* and liked it more than 
 
 ## Listening
 
-Podcasts: **From Stuck to Started**, **The Changelog**, **Handyman Journey**, **Straight White American Jesus**
+- [From Stuck to Started](https://podcasts.apple.com/us/podcast/from-stuck-to-started-executive-function-adhd-coaching/id1775241130)
+- [The Changelog](https://changelog.com/podcast)
+- [Handyman Journey](https://handymanjourney.com)
+- [Straight White American Jesus](https://www.straightwhiteamericanjesus.com/)
 
 Music: **Noah Kahan** on heavy rotation.
