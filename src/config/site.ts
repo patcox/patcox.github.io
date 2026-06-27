@@ -4,4 +4,5 @@ export const SITE = {
   url: 'https://patcox.net',
   showNewsletter: false, // flip to true when ready to launch
   showWriting: false,    // flip to true when ready to publish
+  showNow: true,         // flip to false when page goes stale
 };

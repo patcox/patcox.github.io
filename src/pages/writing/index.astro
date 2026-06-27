@@ -1,6 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, getEntry } from 'astro:content';
+import { SITE } from '../../config/site.ts';
+
+if (!SITE.showWriting) return Astro.redirect('/', 302);
 
 const writing = await getEntry('pages', 'writing');
 const { seo_title, seo_description, heading, description } = writing.data;
