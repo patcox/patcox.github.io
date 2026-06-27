@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import { SITE } from '../../config/site.ts';
 
 export async function getStaticPaths() {
-  if (!SITE.showWriting) return [];
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   const tags = [...new Set(posts.flatMap(p => p.data.tags ?? []))];
   return tags.map(tag => ({ params: { tag } }));
