@@ -9,4 +9,4 @@ I live west of Austin, Texas, where my wife and I are raising three kids and a s
 
 I grew up in New England and have lived in a handful of very different places. I love meeting people and hearing their stories.
 
-I've been fascinated by technology since childhood, and I'm constantly tinkering with new things. I believe technology is most useful when it solves real everyday problems. Even better if it can bring you a little delight while doing it.
+I've been fascinated by technology since childhood, and I'm constantly tinkering with new things. I believe technology is most useful when it solves real, everyday problems. Even better if it can bring you a little delight in the process.
