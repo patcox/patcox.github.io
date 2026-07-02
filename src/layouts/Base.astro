@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import '../styles/global.css';
 import { SITE } from '../config/site.ts';
+import patHeadshot from '../assets/pat-headshot.png';
 
 interface Props {
   title: string;
@@ -52,7 +54,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">Pat Cox</a>
+    <a href="/" class="nav-logo">
+      <Image src={patHeadshot} alt="" class="nav-avatar" width={64} format="webp" />
+      Pat Cox
+    </a>
     <ul class="nav-links">
       {SITE.showNow && <li><a href="/now" aria-current={Astro.url.pathname === '/now' ? 'page' : undefined}>Now</a></li>}
       <li><a href="/connect" aria-current={Astro.url.pathname === '/connect' ? 'page' : undefined}>Connect</a></li>
