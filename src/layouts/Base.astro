@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import '../styles/global.css';
 import { SITE } from '../config/site.ts';
+import patHeadshot from '../assets/pat-headshot.png';
 
 interface Props {
   title: string;
@@ -53,7 +55,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <img src="/pat-headshot.png" alt="" class="nav-avatar" width="32" height="32" />
+      <Image src={patHeadshot} alt="" class="nav-avatar" width={64} format="webp" />
       Pat Cox
     </a>
     <ul class="nav-links">

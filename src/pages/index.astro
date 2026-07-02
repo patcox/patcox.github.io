@@ -1,7 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import { Image } from 'astro:assets';
 import { getCollection, getEntry } from 'astro:content';
 import { SITE } from '../config/site.ts';
+import patHeadshot from '../assets/pat-headshot.png';
 
 const home = await getEntry('pages', 'home');
 const { Content: HomeBio } = await home.render();
@@ -36,12 +38,7 @@ function formatDate(d: Date) {
           </div>
         </div>
         <div class="headshot-wrap">
-          <img
-            src="/pat-headshot.png"
-            alt="Pat Cox"
-            width="160"
-            height="160"
-          />
+          <Image src={patHeadshot} alt="Pat Cox" width={280} format="webp" />
         </div>
       </div>
     </div>

@@ -193,16 +193,15 @@ main { flex: 1; }
 }
 
 .headshot-wrap {
-  width: 160px;
+  width: 220px;
   flex-shrink: 0;
 }
 
 .headshot-wrap img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
-  object-position: center 8%;
   border: 3px solid var(--border);
   box-shadow: var(--shadow);
 }
@@ -770,10 +769,9 @@ main { flex: 1; }
 
   .headshot-wrap {
     order: -1;
-    width: 100px;
+    width: 140px;
   }
 
-  .headshot-wrap img,
   .headshot-initials {
     width: 100px;
     height: 100px;
