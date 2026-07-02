@@ -15,8 +15,6 @@ Getting [Dripping Tech](https://www.drippingtech.com) off the ground — my firs
 ## Outside the Screen
 
 - School's out for summer. Kids are home, no daily routines, we're traveling, and I'm doing my best to keep up.
-- Dug up a batch of rocks, so I need to fill in a bunch of holes.
-- Lost a battle with red wasps last week — got stung directly on the earlobe.
 - This year's flock finally started laying, and we're getting green and blue eggs!
 
 ## Reading
@@ -29,12 +27,14 @@ Getting [Dripping Tech](https://www.drippingtech.com) off the ground — my firs
 
 - MLB games when I can catch them.
 - [Hoppers](https://en.wikipedia.org/wiki/Hoppers_(film))
+- [Toy Story 5](https://en.wikipedia.org/wiki/Toy_Story_5)
 
 ## Listening
 
 - [From Stuck to Started](https://podcasts.apple.com/us/podcast/from-stuck-to-started-executive-function-adhd-coaching/id1775241130)
 - [The Changelog](https://changelog.com/podcast)
-- [Handyman Journey](https://handymanjourney.com)
+- [Handyman Success Podcast](https://podcasts.apple.com/us/podcast/handyman-success-podcast/id1574247740)
 - [Straight White American Jesus](https://www.straightwhiteamericanjesus.com/)
+- [Your Undivided Attention](https://www.humanetech.com/podcast)
 
 Music: **Noah Kahan** on heavy rotation.

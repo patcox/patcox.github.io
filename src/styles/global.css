@@ -770,6 +770,12 @@ main { flex: 1; }
   .headshot-wrap {
     order: -1;
     width: 140px;
+    margin: 0 auto;
+  }
+
+  .headshot-wrap img {
+    aspect-ratio: 1 / 1;
+    object-position: center 8%;
   }
 
   .headshot-initials {
