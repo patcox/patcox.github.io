@@ -1,6 +1,8 @@
 # Agent notes for patcox.net
 
 Instructions for any agent (Claude Code or otherwise) working in this repo.
+If you discover something new while working here that a future agent would
+want to know, add it to this file.
 
 ## /now page
 
@@ -45,10 +47,11 @@ Then clean up afterward — kill the dev server, delete the script, and
 `git checkout -- package.json package-lock.json` to drop the temporary
 playwright dependency before committing.
 
-## Network access
+## Pull requests
 
-This environment's outbound network is locked down to an allowlist (npm,
-GitHub, Anthropic). Arbitrary image hosts, iTunes/Google Books APIs, even
-plain `curl` to most domains will get a 403 from the egress proxy. Don't
-assume you can fetch real cover art, favicons, or other external assets —
-ask the user to supply files/URLs, or use stylized placeholders instead.
+This repo squash-merges PRs, so the PR description becomes the permanent
+commit message on `main` — it's the record, not the last commit's message.
+**Every time you push additional commits to an already-open PR's branch,
+update the PR title/body (`update_pull_request`) before ending your turn**
+so it describes the full current diff, not just what was true when the PR
+was first opened.
