@@ -52,7 +52,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">Pat Cox</a>
+    <a href="/" class="nav-logo">
+      <img src="/pat-headshot.png" alt="" class="nav-avatar" width="32" height="32" />
+      Pat Cox
+    </a>
     <ul class="nav-links">
       {SITE.showNow && <li><a href="/now" aria-current={Astro.url.pathname === '/now' ? 'page' : undefined}>Now</a></li>}
       <li><a href="/connect" aria-current={Astro.url.pathname === '/connect' ? 'page' : undefined}>Connect</a></li>

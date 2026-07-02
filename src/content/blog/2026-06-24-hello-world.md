@@ -21,7 +21,7 @@ No editorial schedule. No algorithm to feed. Just writing when I have something 
 
 ## The scheduling page
 
-One thing I built here that I'm genuinely excited about: [a page to schedule time with me](/connect). Coffee, lunch, a quick call. I spend a lot of time on Zoom but I'd rather be meeting people in person.
+One thing I built here that I'm genuinely excited about: [a page to schedule time with me](/connect). Meet up in person, or hop on a quick call. I spend a lot of time on Zoom but I'd rather be meeting people in person.
 
 If you're in the Hill Country or just passing through Dripping Springs, let's get lunch.
 

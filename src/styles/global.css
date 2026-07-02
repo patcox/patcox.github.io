@@ -77,6 +77,9 @@ a:hover { color: var(--accent-warm); }
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 700;
@@ -85,6 +88,16 @@ a:hover { color: var(--accent-warm); }
   letter-spacing: -0.01em;
 }
 .nav-logo:hover { color: var(--accent); }
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 8%;
+  border: 1.5px solid var(--border);
+  flex-shrink: 0;
+}
 
 .nav-links {
   display: flex;
