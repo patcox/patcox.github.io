@@ -1,0 +1,33 @@
+name: Now page freshness check
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/pages/now.md'
+
+jobs:
+  check-last-updated:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check that lastUpdated was bumped
+        run: |
+          FILE="src/content/pages/now.md"
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          DIFF=$(git diff "origin/${{ github.base_ref }}...HEAD" -- "$FILE")
+
+          if [ -z "$DIFF" ]; then
+            echo "No changes to $FILE — skipping."
+            exit 0
+          fi
+
+          if echo "$DIFF" | grep -qE '^\+lastUpdated:'; then
+            echo "lastUpdated was bumped — good."
+            exit 0
+          fi
+
+          echo "::error file=$FILE::now.md content changed but 'lastUpdated' in the frontmatter wasn't bumped. Update it to today's date."
+          exit 1

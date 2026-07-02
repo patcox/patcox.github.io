@@ -1,5 +1,5 @@
 ---
-lastUpdated: "June 26, 2026"
+lastUpdated: "July 2, 2026"
 ---
 
 ## Work
