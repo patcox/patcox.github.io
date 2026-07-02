@@ -259,7 +259,7 @@ main { flex: 1; }
 }
 
 .section-label {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -464,7 +464,6 @@ main { flex: 1; }
 .page-header .section-label {
   margin-top: 0;
   color: var(--accent);
-  font-size: 1rem;
 }
 
 /* ─── Individual Post ────────────────────────────────────────────────── */
