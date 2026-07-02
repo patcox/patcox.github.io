@@ -146,7 +146,7 @@ main { flex: 1; }
 
 /* ─── Hero ───────────────────────────────────────────────────────────── */
 .hero {
-  padding: 5rem 0 3.5rem;
+  padding: 2rem 0 3.5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -259,7 +259,7 @@ main { flex: 1; }
 }
 
 .section-label {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -440,7 +440,7 @@ main { flex: 1; }
 
 /* ─── Inner Page Header (Now, Connect, Writing) ──────────────────────── */
 .page-header {
-  padding: 3.5rem 0 2rem;
+  padding: 2rem 0 2rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -464,7 +464,6 @@ main { flex: 1; }
 .page-header .section-label {
   margin-top: 0;
   color: var(--accent);
-  font-size: 1rem;
 }
 
 /* ─── Individual Post ────────────────────────────────────────────────── */
@@ -770,6 +769,12 @@ main { flex: 1; }
   .headshot-wrap {
     order: -1;
     width: 140px;
+    margin: 0 auto;
+  }
+
+  .headshot-wrap img {
+    aspect-ratio: 1 / 1;
+    object-position: center 8%;
   }
 
   .headshot-initials {
