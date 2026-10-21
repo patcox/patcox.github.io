@@ -4,6 +4,14 @@ Instructions for any agent (Claude Code or otherwise) working in this repo.
 If you discover something new while working here that a future agent would
 want to know, add it to this file.
 
+## Hosting
+
+The site is built and served by Vercel (Git integration; production deploys
+from `main`, preview deploys on PRs) at patcox.net. GitHub Pages is turned
+off — don't add a Pages workflow, `CNAME`, or `.nojekyll`. The repo was
+renamed from `patcox.github.io` to `personal-website` in October 2026, so
+local clones may still sit in a `patcox.github.io` directory.
+
 ## /now page
 
 Whenever you edit `src/content/pages/now.md`, update the `lastUpdated` field
